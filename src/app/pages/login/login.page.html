@@ -1,0 +1,69 @@
+<ion-content>
+  <ion-grid class="h-100">
+    <ion-row class="h-100 justify-content-center" style="align-items: center;">
+      <ion-col class="container">
+        <ion-row>
+          <ion-col>
+            <h1 class="logo">BitsVOS</h1>
+          </ion-col></ion-row
+        >
+        <ion-row>
+          <ion-col>
+            <h3 class="sign-in">Sign In</h3>
+          </ion-col></ion-row
+        >
+
+        <ion-row>
+          <ion-col>
+            <div class="login-form">
+              <form [formGroup]="loginForm">
+                <mat-form-field appearance="outline" class="input">
+                  <mat-label>Username</mat-label>
+                  <input
+                    matInput
+                    placeholder="Enter your username"
+                    formControlName="username"
+                  />
+                  <mat-error *ngIf="username.invalid"
+                    >Please provide a valid username</mat-error
+                  >
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="input">
+                  <mat-label>Password</mat-label>
+                  <input
+                    matInput
+                    [type]="hide ? 'password' : 'text'"
+                    placeholder="Enter your password"
+                    formControlName="password"
+                  />
+                  <button
+                    mat-icon-button
+                    matSuffix
+                    (click)="hide = !hide"
+                    [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide"
+                  >
+                    <mat-icon
+                      >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon
+                    >
+                  </button>
+                  <mat-error *ngIf="password.invalid"
+                    >Please provide a valid password</mat-error
+                  >
+                </mat-form-field>
+                <button
+                  mat-raised-button
+                  color="primary"
+                  class="button"
+                  (click)="login(loginForm.value)"
+                >
+                  Sign In
+                </button>
+              </form>
+            </div></ion-col
+          ></ion-row
+        >
+      </ion-col></ion-row
+    ></ion-grid
+  >
+</ion-content>
