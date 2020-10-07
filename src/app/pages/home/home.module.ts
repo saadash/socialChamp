@@ -1,26 +1,23 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { IonicModule } from "@ionic/angular";
 import { RouterModule } from "@angular/router";
 
-import { LoginPage } from "./login.page";
+import { HomePage } from "./home.page";
 import { MaterialModule } from "src/app/core/modules/material/material.module";
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
-    IonicModule,
     RouterModule.forChild([
       {
         path: "",
-        component: LoginPage
+        component: HomePage
       }
     ]),
+    ReactiveFormsModule,
     MaterialModule,
-    ReactiveFormsModule
   ],
-  declarations: [LoginPage]
+  declarations: [HomePage]
 })
-export class LoginPageModule {}
+export class HomePageModule { }

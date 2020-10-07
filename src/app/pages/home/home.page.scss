@@ -1,0 +1,283 @@
+/* Topbar */
+.toolbar {
+  padding: 0 !important;
+  box-shadow: 0px 6px 8px 1px rgba(229, 229, 229, 1);
+  height: 60px;
+  background: #ffffff;
+  z-index: 2;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  box-shadow: 6px 4px 10px 2px rgba(229, 229, 229, 1);
+  overflow-x: hidden;
+}
+
+::ng-deep .mat-drawer-inner-container {
+  padding-right: 17px;
+}
+
+.toggle-btn {
+  color: #f09320;
+  margin-left: 6px;
+}
+
+.toggle {
+  position: fixed;
+  width: 10px;
+  left: 259px;
+  top: calc(100% - 120px);
+  background: #ffffff;
+  height: 50px;
+  border-radius: 0 11px 11px 0;
+  cursor: pointer;
+}
+
+.toggle svg {
+  fill: #6d6d6e;
+  transition: 0.1s !important;
+  left: -8px;
+  position: absolute;
+  top: 12px;
+}
+
+.search mat-icon {
+  font-size: 18px;
+}
+
+.profile .avatar {
+  border-radius: 32px;
+}
+
+.profile .logo {
+  position: absolute;
+  top: 24px;
+  left: 36px;
+}
+
+.profile .name,
+.profile .type {
+  margin: 0;
+  font-size: 12px;
+}
+
+.profile .name {
+  font-weight: bold;
+}
+
+.profile .type {
+  color: #767676;
+}
+
+.profile .info {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.is-mobile .toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+h1.app-name {
+  margin-left: 8px;
+}
+
+.sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.is-mobile .sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+.mat-drawer-content {
+  background: #efefef;
+}
+
+.mat-chip {
+  background-color: #efefef !important;
+}
+
+::ng-deep .mat-chip-list-wrapper {
+  box-shadow: 0px 0px 5px 3px rgba(229, 229, 229, 0.75);
+  border: 0.5px solid rgba(229, 229, 229, 1) !important;
+  border-radius: 10px;
+  min-height: 40px;
+}
+
+/* Content Editor */
+.content-editor {
+  padding: 16px;
+}
+
+.content-editor > div {
+  background-color: #ffffff;
+  padding-bottom: 16px;
+  box-shadow: 0px 0px 5px 3px rgba(229, 229, 229, 0.75);
+  border: 0.5px solid rgba(229, 229, 229, 1) !important;
+  border-radius: 10px;
+}
+
+.content-editor .heading {
+  border-bottom: 2px solid #efefef;
+}
+
+.content-editor .sub-heading {
+  padding-bottom: 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 16px;
+}
+
+.flex-item-left {
+  padding: 10px;
+  flex: 1;
+  margin-right: 16px;
+  box-shadow: 0px 0px 5px 3px rgba(229, 229, 229, 0.75);
+  border: 0.5px solid rgba(229, 229, 229, 1) !important;
+  border-radius: 10px;
+}
+
+.flex-item-right {
+  flex: 1;
+  margin-left: 16px;
+  box-shadow: 0px 0px 5px 3px rgba(229, 229, 229, 0.75);
+  border: 0.5px solid rgba(229, 229, 229, 1) !important;
+  border-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+  .flex-item-right {
+    flex: 100%;
+    margin-left: 0px !important;
+  }
+  .flex-item-left {
+    flex: 100%;
+    margin-right: 0px !important;
+    margin-bottom: 10px;
+  }
+}
+
+.text-input {
+  width: 100%;
+}
+
+.text-input textarea {
+  resize: none;
+  height: calc(100vh - 454px);
+  min-height: 75px;
+}
+
+.text-input ::ng-deep .mat-form-field-wrapper {
+  padding-bottom: 0px !important;
+}
+
+.word-limit {
+  text-align: right;
+  font-size: 12px;
+  margin-bottom: 0 !important;
+}
+
+.preview {
+  min-height: 75px;
+}
+
+.preview-header {
+  color: #8b8b8b;
+  margin-top: 10px !important;
+  padding-bottom: 10px !important;
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 10px;
+}
+
+.preview p {
+  padding: 0 16px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.send {
+  margin: 16px;
+  padding: 10px;
+  box-shadow: 0px 0px 5px 3px rgba(229, 229, 229, 0.75);
+  border: 0.5px solid rgba(229, 229, 229, 1) !important;
+  border-radius: 10px;
+  text-align: right;
+}
+
+.send button {
+  color: #ffffff;
+  background-color: #f09320;
+  font-weight: bold;
+  width: 120px;
+}
+
+/* General  */
+
+.w-100 {
+  width: 100% !important;
+}
+
+.heading {
+  font-size: 1em;
+  font-weight: bold;
+  color: #f09320;
+}
+.sub-heading {
+  font-size: 0.8em;
+  color: #000000;
+}
+::ng-deep .mat-form-field-flex > .mat-form-field-infix {
+  padding: 0.3em 0px !important;
+  font-size: 12px;
+}
+::ng-deep .mat-form-field-label-wrapper {
+  top: -1.5em;
+}
+
+::ng-deep
+  .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float
+  .mat-form-field-label {
+  transform: translateY(-1.1em) scale(0.75);
+  width: 133.33333%;
+}
+
+.mat-list-option[aria-selected="true"] {
+  background: #f6c98d;
+}
+
+.mat-list-option[aria-selected="false"] img {
+  filter: grayscale(100%);
+}
+
+::ng-deep .mat-pseudo-checkbox {
+  display: none !important;
+}
+
+.mat-badge-content {
+  font-family: "Material Icons";
+}

@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MaterialModule } from './core/modules/material/material.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './core/services/api/api.service';
 
 @NgModule({
   declarations: [
@@ -14,9 +15,9 @@ import { MaterialModule } from './core/modules/material/material.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

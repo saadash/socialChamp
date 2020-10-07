@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: "ProximaNova";
-  src: url("assets/fonts/ProximaNova-Regular.otf") format("otf");
+  src: url("assets/fonts/proximanova-regular-webfont.ttf");
 }
 
 body {
@@ -11,6 +11,6 @@ body {
   padding: 0;
 }
 
-* {
-  font-family: "ProximaNova", Fallback, sans-serif !important;
+*:not(mat-icon) {
+  font-family: "ProximaNova" !important;
 }
